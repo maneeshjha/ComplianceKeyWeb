@@ -1,0 +1,68 @@
+.logo{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:25px;
+	padding-left:20px;
+	color:#0289dc;
+	font-weight:bold;
+	}
+
+.topmenu{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	padding-left:5px;
+	color:#ffffff;
+	font-weight:normal;
+	text-decoration:none;
+	}
+
+.bordertop{
+	border-top:solid 1px #e7e7e7;
+	}
+
+.borderleft{
+	border-left:solid 1px #e7e7e7;
+	}
+
+.borderright{
+	border-right:solid 1px #e7e7e7;
+	}
+
+.bradcrum{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-weight:normal;
+	padding-left:5px;
+	color:#0c5e90;
+	
+	}
+
+.Maintitle{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	padding-left:5px;
+	color:#0c5e90;
+	
+	}
+
+.Calender_textbox{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	padding-left:5px;
+	width:135px;
+	height:18px;
+	border:solid 1px #e7e7e7;
+	color:#5c5c5c;
+	}
+
+.timelistlistbox{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:normal;
+	padding-left:5px;
+	width:70px;
+	height:18px;
+	border:solid 1px #e7e7e7;
+	color:#5c5c5c;
+	}
