@@ -16,7 +16,7 @@ import com.ck.Bean.LoginBean;
 import com.ck.DAO.LoginForm;
 import com.ck.action.ComplianceDispatchAction;
 
-public class LoginAction extends DispatchAction{
+public class LoginAction extends ComplianceDispatchAction{
 	public ActionForward checkLogin(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 		LoginForm     loginForm   = (LoginForm) form;
 		LoginBean		loginBean = new LoginBean();

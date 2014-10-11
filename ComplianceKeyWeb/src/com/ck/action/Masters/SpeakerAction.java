@@ -1,5 +1,7 @@
 package com.ck.action.Masters;
 
-public class SpeakerAction {
+import com.ck.action.ComplianceDispatchAction;
+
+public class SpeakerAction extends ComplianceDispatchAction{
 
 }
