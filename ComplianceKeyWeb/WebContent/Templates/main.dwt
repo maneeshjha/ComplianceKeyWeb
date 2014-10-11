@@ -243,8 +243,12 @@ if (uname==null)
 <div style="<%=RARList.get(1)%>">
 <h3 class="menuheader expandable" style="<%=RARList.get(1)%>">Masters</h3> 
 <ul class="categoryitems">
-	<li style="<%=RARList.get(7)%>"><a href="<%=request.getContextPath()%>/categoryAction.do?reqCode=showCategoryListPage">Category Master</a></li>
-	<li style="<%=RARList.get(8)%>"><a href="<%=request.getContextPath()%>/documentAction.do?reqCode=showDocumentListPage">Document Master</a></li>		
+	<li style="<%=RARList.get(7)%>"><a href="<%=request.getContextPath()%>/categoryAction.do?reqCode=showCategoryListPage">Speaker/Expert Master</a></li>
+	<li style="<%=RARList.get(8)%>"><a href="<%=request.getContextPath()%>/documentAction.do?reqCode=showDocumentListPage">Course Master</a></li>	
+	<li style="<%=RARList.get(8)%>"><a href="<%=request.getContextPath()%>/documentAction.do?reqCode=showDocumentListPage">Industries Master</a></li>
+	<li style="<%=RARList.get(8)%>"><a href="<%=request.getContextPath()%>/documentAction.do?reqCode=showDocumentListPage">Training Type Master</a></li>	
+	<li style="<%=RARList.get(8)%>"><a href="<%=request.getContextPath()%>/documentAction.do?reqCode=showDocumentListPage">Article Master</a></li>	
+	<li style="<%=RARList.get(8)%>"><a href="<%=request.getContextPath()%>/documentAction.do?reqCode=showDocumentListPage">White Paper Master</a></li>			
 </ul>
 </div>
 
