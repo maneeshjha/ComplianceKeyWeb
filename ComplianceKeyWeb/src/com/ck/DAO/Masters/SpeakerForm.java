@@ -2,6 +2,7 @@
 package com.ck.DAO.Masters;
 
 import org.apache.struts.action.ActionForm;
+import org.apache.struts.upload.FormFile;
 
 public class SpeakerForm extends ActionForm{
 	private String speakerID;
@@ -9,6 +10,13 @@ public class SpeakerForm extends ActionForm{
 	private String photoName;
 	private String description;
 	private String status;
+	private FormFile file;
+	public FormFile getFile() {
+		return file;
+	}
+	public void setFile(FormFile file) {
+		this.file = file;
+	}
 	public String getSpeakerID() {
 		return speakerID;
 	}

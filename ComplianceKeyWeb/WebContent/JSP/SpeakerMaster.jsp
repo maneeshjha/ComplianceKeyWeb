@@ -12,6 +12,7 @@
 <title>Speaker Profile</title>
 </head>
 <body>
+<html:form action="/speakerAction.do?reqCode=updateSpeakerInfo" enctype="multipart/form-data">
 <table align="center">
 <tr>
 <td>Speaker Name:</td> <td><html:text property="speakerName" value=""/></td>
@@ -20,8 +21,12 @@
 <td>Description:</td> <td><html:textarea property="description" value=""/></td>
 </tr>
 <tr>
-<td>Speaker Photo:</td> <td><html:file property="photoName" value=""/></td>
+<td>Speaker Photo:</td> <td><html:file property="file" value=""/></td>
 </tr>
+<tr><td>Status<td><input type="radio" name="status" value="ACTIVE"/>ACTIVE</td><td><input type="radio" name="status" value="INACTIVE"/>INACTIVE</td></tr>
+<tr><td><input type="submit" value="Submit"/></td></tr>
 </table>
+</html:form>
 </body>
+
 </html>
