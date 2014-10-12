@@ -18,6 +18,14 @@ import com.ck.DAO.Masters.SpeakerForm;
 import com.ck.action.ComplianceDispatchAction;
 
 public class SpeakerAction extends ComplianceDispatchAction{
+	
+	public ActionForward showSpeakerMasterPage(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+		SpeakerForm         speakerForm   = (SpeakerForm)form;
+		speakerForm.reset(mapping, request);
+		speakerForm.setStatus("ACTIVE");
+		return mapping.findForward("showSpeakerMasterPage");
+		
+	}
 	//@author:Maneesh
 	//purpose:To update speaker Info
 	public ActionForward updateSpeakerInfo(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
