@@ -13,6 +13,7 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
 
+import com.ck.Bean.Masters.SpeakerBean;
 import com.ck.DAO.Masters.SpeakerForm;
 import com.ck.action.ComplianceDispatchAction;
 
@@ -28,6 +29,10 @@ public class SpeakerAction extends ComplianceDispatchAction{
 				String   					filePath		=			"D:"+"/ComplianceKey";
 				File 						folder			= 			new File(filePath);
 				String 						fileName		=			file.getFileName();
+				String 						fileMessage		=				"";
+				String						message		=	"";
+				boolean 					success		= false;
+				speakerForm.setPhotoName(fileName);
 				if(!folder.exists())
 				{
 					folder.mkdir();
@@ -41,12 +46,28 @@ public class SpeakerAction extends ComplianceDispatchAction{
 						fos.write(file.getFileData());
 						fos.flush();
 						fos.close();
+						fileMessage="Successfuly Saved";
 						
 					}
 					
 				}
+			if(!fileMessage.isEmpty())
+			{
+				success=SpeakerBean.updateUserInfo(speakerForm);
+				
+			}
+			if(success)
+			{
+				message="Speaker Data has been saved Successfully";
+				request.setAttribute("msg", message);
 			
-		return null;
+			}
+			else
+			{
+				message="Cannot Save Speaker Data";
+				request.setAttribute("msg", message);
+			}
+		return mapping.findForward("showSpeakerMasterPage");
 	
 		}
 	

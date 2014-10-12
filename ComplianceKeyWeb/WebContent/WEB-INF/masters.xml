@@ -32,7 +32,7 @@
             validate	=	"false"
             attribute	=	"SpeakerForm" >
             
-            <forward name	=	"showUserListPage"					path = "/JSP/UserList.jsp" />
+            <forward name	=	"showSpeakerMasterPage"					path = "/JSP/SpeakerMaster.jsp" />
             <forward name	=	"showUserMasterPage"				path = "/JSP/UserMaster.jsp" />
 	    </action>
 	    

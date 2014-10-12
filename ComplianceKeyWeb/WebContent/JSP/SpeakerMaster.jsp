@@ -8,12 +8,18 @@
 <%@ page import="java.util.*" %>
 <html>
 <head>
+<%String msg=(String)request.getAttribute("msg"); %>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Speaker Profile</title>
 </head>
 <body>
 <html:form action="/speakerAction.do?reqCode=updateSpeakerInfo" enctype="multipart/form-data">
 <table align="center">
+<% if(msg!=null && msg.length()>0){%>
+<tr>
+<%=msg%>
+</tr>
+<%} %>
 <tr>
 <td>Speaker Name:</td> <td><html:text property="speakerName" value=""/></td>
 </tr>
