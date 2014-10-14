@@ -6,10 +6,10 @@ function showAddEmployeeMasterPage()
 }
 function getStatusWiseSpeakerName(obj,event)
 {
-	var spkName	   =	trim(obj.value);
+	var spkName	    =	trim(obj.value);
 	var reqCode		=	"getStatusWiseSpeakerList";
 	var url			=	"commonMethodAction.do";
-	var keyvalue		=	event.keyCode;
+	var keyvalue	=	event.keyCode;
 	if(keyvalue == 38 || keyvalue == 40 || keyvalue == 13 || keyvalue == 9)
 	{	
 		if(document.getElementById("divSpeakerName").innerHTML != "")
@@ -55,6 +55,7 @@ function getStatusWiseSpeakerName(obj,event)
 function processSpeakerList(transprot)
 {
 	var response = 	transprot.responseText;
+	alert("hI");
 	var data	 =	eval("("+response+")"); 
     var dataList =	data.DataList;
 	var text	 =	"";

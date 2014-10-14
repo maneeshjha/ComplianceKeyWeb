@@ -35,6 +35,7 @@
             <forward name	=	"ShowIndexPage"				path = "/JSP/index.jsp" />
              <forward name	=	"ShowHomePage"				path = "/JSP/Home.jsp" />
             </action>
+            
             <action
             path		= 	"/commonMethodAction"
             type		= 	"com.ck.action.CommonMethodAction"

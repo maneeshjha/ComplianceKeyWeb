@@ -13,12 +13,11 @@ public class CommonMethodBean {
 	public JSONArray getSpeakerNameForTTS(String speakerName,String status)
 	{
 		
-		Connection			   	con			=	null;
-		Statement			   	st			=	null;
-		ResultSet			   	rs			=	null;
-		JSONArray				speakerArray	=	new JSONArray();
-		
-		String				   query		=	"";
+		Connection			   	con			 =	null;
+		Statement			   	st			 =	null;
+		ResultSet			   	rs			 =	null;
+		JSONArray				speakerArray =	new JSONArray();
+		String				   query		 =	"";
 		
 		try
 		{

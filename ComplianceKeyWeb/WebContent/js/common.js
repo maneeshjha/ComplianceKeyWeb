@@ -77,77 +77,77 @@ function validateEmailID(obj) {
 			return true;	
 		}
 		
-		var at="@"
-		var dot="."
-		var lat=str.indexOf(at)
-		var lstr=str.length
-		var ldot=str.indexOf(dot)
+		var at="@";
+		var dot=".";
+		var lat=str.indexOf(at);
+		var lstr=str.length;
+		var ldot=str.indexOf(dot);
 		if (str.indexOf(at)==-1){
 		   alert("Invalid E-mail ID.");
 		   obj.select();
 		   obj.focus();
-		   return false
+		   return false;
 		}
 
 		if (str.indexOf(at)==-1 || str.indexOf(at)==0 || str.indexOf(at)==lstr){
 		   alert("Invalid E-mail ID.");
 		   obj.select();
 		   obj.focus();
-		   return false
+		   return false;
 		}
 
 		if (str.indexOf(dot)==-1 || str.indexOf(dot)==0 || str.indexOf(dot)==lstr){
 		    alert("Invalid E-mail ID.");
 			obj.select();
 		    obj.focus();
-		    return false
+		    return false;
 		}
 
 		 if (str.indexOf(at,(lat+1))!=-1){
 		    alert("Invalid E-mail ID.");
 			obj.select();
 		   obj.focus();
-		    return false
+		    return false;
 		 }
 
 		 if (str.substring(lat-1,lat)==dot || str.substring(lat+1,lat+2)==dot){
 		    alert("Invalid E-mail ID.");
 			obj.select();
 		   obj.focus();
-		    return false
+		    return false;
 		 }
 
 		 if (str.indexOf(dot,(lat+2))==-1){
 		    alert("Invalid E-mail ID.");
 			obj.select();
 		   obj.focus();
-		    return false
+		    return false;
 		 }
 		
 		 if (str.indexOf(" ")!=-1){
 		    alert("Invalid E-mail ID.");
 			obj.select();
 		   obj.focus();
-		    return false
+		    return false;
 		 }
 		  if (str.indexOf(dot) == (lstr-1)){
-		    alert("Invalid E-mail ID.")
-		    return false
+		    alert("Invalid E-mail ID.");
+		    return false;
 		 }
 		 if(str.charAt(lstr-1) == "." )
 		 {
-			alert("Invalid E-mail ID.")
-		    return false 
+			alert("Invalid E-mail ID.");
+		    return false ;
 		 }
 
- 		 return true					
+ 		 return true;				
 	}
 	
 function checkenter(event)
 {
 	 if(window.event) 
 	 {
-		keychar = String.fromCharCode(event.keyCode)
+		keychar = String.fromCharCode(event.keyCode);
 		
 		if (event.keyCode ==13)
 			  return false;     
@@ -531,201 +531,6 @@ function clearFileField(name)
     elm.parentNode.replaceChild(elm1,elm);
 }
 
-
-/**
-* This method will execute on startup
-*/
-$j(document).ready(function(){
-							
-	
-	$j(function() {
-		$j( ".resizableTextarea" ).resizable({			
-			maxHeight: 200,
-			maxWidth: 200,
-			minHeight: 60,
-			minWidth: 200});
-	});
-	
-	
-	$j(function() {
-				
-		$j( ".modalDialog" ).dialog({
-				autoOpen: false,			
-				height: 450,
-				width: 800,
-				modal: true,
-				create:function(event, ui){	
-					$j(this).parent().appendTo("form");
-				},
-				open : function(event, ui){						
-										
-					$j(this).parent().focus();
-					var el = $j(this).find('select, input, textarea').first();
-					
-					if(!el.is(":hidden") && !el.is(":disabled"))
-					{
-						el.focus();
-					}
-					$j(".typeToSearch").each(function() {
-						if(trim($j(this).val()) == "" && !$j(this).is(":focus"))
-						{
-							$j(this).css("background-image","url(images/tts.png)");
-						}else {
-							$j(this).css("background-image","none");						
-						}
-					});	
-				}				
-		});
-		
-		/*applying user define style for tooltip (mystyle is name user define style)*/
-		$j.fn.qtip.styles.mystyle = { 	// Last part is the name of the style
-									   	'font-family'	 :	'Arial, Helvetica, sans-serif',
-										'font-size'		 :	12,
-										'font-weight'	 :	'normal',
-										color			 : 	'#5c5c5c',
-										padding 		 : 	5,
-										border			 :  {
-																color : '#8ab1c8'
-															}
-									 	//name			: 	'light' // Inherit the rest of the attributes from the preset dark style
-									}
-		/*end of code*/
-		
-		$j("input[type=text], input[type=password], textarea, select, input[type=file]").each(function() {
-			if($j(this).attr("title"))
-			{
-				$j(this).qtip({ style: {name: 'mystyle',tip: true },show: 'focus',
-						hide:'blur',position: {corner: {target: 'rightMiddle',tooltip: 'leftMiddle' }  },adjust : {resize : true } 
-				});	
-				
-				if($j(this).is(":focus"))
-				{
-					$j(this).focus();
-				}
-			}
-		});
-		
-		$j(".typeToSearch").each(function() {
-			
-			$j(this).attr("autocomplete","off");
-			$j(this).css("background-repeat","no-repeat");
-			if(trim($j(this).val()) == "" )
-			{
-				$j(this).css("background-image","url(images/tts.png)");			
-			}
-			if($j(this).is(":focus"))
-			{
-				$j(this).css("background-image","none");
-			}		
-			$j(this).keyup(function(e){
-				if(trim($j(this).val()) == "" && !$j(this).is(":focus"))
-				{
-					$j(this).css("background-image","url(images/tts.png)");
-				}else {
-					$j(this).css("background-image","none");				
-				}
-			});
-			$j(this).focus(function(){
-				$j(this).css("background-image","none");	
-				
-				$j(".typeToSearch").each(function() {
-					if(trim($j(this).val()) == "" && !$j(this).is(":focus"))
-					{
-						$j(this).css("background-image","url(images/tts.png)");
-					}else {
-						$j(this).css("background-image","none");						
-					}
-				});	
-				
-			});
-			$j(this).blur(function(){
-				if(trim($j(this).val()) == "" )
-				{
-					$j(this).css("background-image","url(images/tts.png)");
-				}
-			});				
-		});
-		
-		$j(function() {
-			$j( ".datePicker" ).datepicker({dateFormat: 'dd/mm/yy',changeMonth: true,
-				changeYear: true,constrainInput: false});
-			$j( ".datePicker" ).click(function(){ $j(this).datepicker("show"); });
-			$j(".datePicker").keypress(function(event) {event.preventDefault();});
-		});
-		
-		$j(".dtable").each(function() {
-			if(!($j(this).parent().hasClass("scrollContainer") || $j(this).parent().hasClass("tableScrollContainer")))
-			{
-				if(!($j(this).parent().hasClass("divScrollContainer")))
-					$j(this).wrap('<div class="scrollContainer" />');				
-			}
-		});
-		
-		$j(".subsectiontable").each(function() {
-			if(!($j(this).parent().hasClass("subsectionScrollContainer") || $j(this).parent().hasClass("tableScrollContainer")))
-			{
-				$j(this).wrap('<div class="subsectionScrollContainer" />');				
-			}
-		});
-		
-		if($j.browser.msie){
-			
-			//$j(".longList").wrap("<div style='width:200px;overflow-x:scroll;'  />");
-			$j(".longList").mousedown(function(){
-				$j(this).css("width","auto");
-				$j(this).css("top",($j(this).position().top-1));
-				$j(this).css("position","absolute");
-			});
-			$j(".longList").change(function(){
-				$j(this).css("width","200px");
-				$j(this).css("top",($j(this).position().top+1));
-				$j(this).css("position","");
-			});
-			$j(".longList").blur(function(){
-				$j(this).css("width","200px");
-				$j(this).css("top",($j(this).position().top+1));
-				$j(this).css("position","");
-			});
-		
-		}else
-		{
-			$j(".longList").css("width","200px");
-		}
-		
-		
-		$j.extend($j.expr[':'], {
-			focusable: function(element) {
-				var nodeName = element.nodeName.toLowerCase(),
-					tabIndex = $j.attr(element, 'tabindex');
-				return (/input|select|textarea|button|object/.test(nodeName) ? !element.disabled : 'a' == nodeName || 'area' == nodeName ? element.href || !isNaN(tabIndex) : !isNaN(tabIndex))
-				// the element and all of its ancestors must be visible
-				// the browser may report that the area is hidden
-				&& !$j(element)['area' == nodeName ? 'parents' : 'closest'](':hidden').length;
-			}
-		});
-		
-		$j("body:eq(0)").click(function (e){
-			
-			if($j.browser.msie) {				
-				if(!$j(e.target).is("select") && !$j(e.target).hasClass("ajaxDiv")){
-					hideTTS();
-				}
-				
-			}else {
-				if(!$j(e.target).is("option") && !$j(e.target).hasClass("ajaxDiv") ){
-					hideTTS();
-				}
-			}
-		});
-		
-		
-		
-		//document.body.ondblclick= hideTTS;
-	
-	});
-	
-});
-
 function nextFocus(element)
 {
 	if(element != undefined)
@@ -764,7 +569,7 @@ function allowIntegerGreaterThanZero(obj)
 	{
 		for (var i = 0; i < val.length; i++) 
 		{
-			var ch = val.charAt(i) 
+			var ch = val.charAt(i);
 			if (ch < "0" || ch > "9") 
 			{           
 				alert("Please Enter Only Whole Number.");
