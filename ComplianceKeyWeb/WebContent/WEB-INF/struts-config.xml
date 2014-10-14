@@ -35,6 +35,13 @@
             <forward name	=	"ShowIndexPage"				path = "/JSP/index.jsp" />
              <forward name	=	"ShowHomePage"				path = "/JSP/Home.jsp" />
             </action>
+            <action
+            path		= 	"/commonMethodAction"
+            type		= 	"com.ck.action.CommonMethodAction"
+            parameter	= 	"reqCode"
+            scope		= 	"request" 
+			validate	= 	"false" >
+	    </action>
 	   
         <!-- in a real application deployment -->
         <action path="/admin/addFormBean" type="org.apache.struts.actions.AddFormBeanAction" />
@@ -57,5 +64,4 @@
 	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
         <set-property property="pathnames" value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml"/>
     </plug-in>
-
 </struts-config>

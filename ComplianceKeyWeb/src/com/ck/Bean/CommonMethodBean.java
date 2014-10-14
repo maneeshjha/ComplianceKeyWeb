@@ -27,7 +27,7 @@ public class CommonMethodBean {
 								"	where 		0=0			" ;
 								if(!speakerName.isEmpty())
 								{
-									query	+=	"	and	employeename	like	'"+speakerName+"%'	" ;
+									query	+=	"	and	speakername	like	'"+speakerName+"%'	" ;
 								}
 								if(status != null && status.length() > 0)
 								{

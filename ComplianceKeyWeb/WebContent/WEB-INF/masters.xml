@@ -33,7 +33,7 @@
             attribute	=	"SpeakerForm" >
             
             <forward name	=	"showSpeakerMasterPage"					path = "/JSP/SpeakerMaster.jsp" />
-            <forward name	=	"showUserMasterPage"				path = "/JSP/UserMaster.jsp" />
+            <forward name	=	"showSpeakerListPage"				path = "/JSP/SpeakerList.jsp" />
 	    </action>
 	    
 	   

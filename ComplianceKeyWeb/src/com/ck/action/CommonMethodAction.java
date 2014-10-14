@@ -17,25 +17,25 @@ import org.json.JSONObject;
 import com.ck.Bean.CommonMethodBean;
 
 public class CommonMethodAction extends ComplianceDispatchAction {
-	public ActionForward getStatusWiseEmpList(ActionMapping mapping,ActionForm form, HttpServletRequest request, HttpServletResponse response)throws IOException,SQLException
+	public ActionForward getStatusWiseSpeakerList(ActionMapping mapping,ActionForm form, HttpServletRequest request, HttpServletResponse response)throws IOException,SQLException
 	{
 		
 		PrintWriter				writer				=	response.getWriter();
-		String					empName			=	request.getParameter("empName")== null ? "" : request.getParameter("empName").trim().toUpperCase();
+		String					speakerName				=	request.getParameter("spkName")== null ? "" : request.getParameter("spkName").trim().toUpperCase();
 		String					status				=	request.getParameter("status");
 		CommonMethodBean		commonMethodBean		= new CommonMethodBean();
-		JSONArray				empList			=	commonMethodBean.getSpeakerNameForTTS(empName, status);
+		JSONArray				speakerList			=	commonMethodBean.getSpeakerNameForTTS(speakerName, status);
 		try
 		{
 			JSONObject		object				=	new JSONObject();
-			object.put("DataList", empList);
+			object.put("DataList", speakerList);
 			
 			String  result		=	object.toString();
 			writer.println(result);
 		}
 		catch (JSONException e) 
 		{
-			System.out.println("Error in CommonMethodAction:getStatusWiseempList():"+e);
+			System.out.println("Error in CommonMethodAction:getStatusWiseSpeakerList():"+e);
 		}
 		return null;
 	}
