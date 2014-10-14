@@ -7,6 +7,7 @@ function showAddEmployeeMasterPage()
 function getStatusWiseSpeakerName(obj,event)
 {
 	var spkName	    =	trim(obj.value);
+	alert(spkName);
 	var reqCode		=	"getStatusWiseSpeakerList";
 	var url			=	"commonMethodAction.do";
 	var keyvalue	=	event.keyCode;
@@ -31,6 +32,7 @@ function getStatusWiseSpeakerName(obj,event)
 		if(spkName.length > 0)
 		{	
 			showProcessing("divSpeakerName");
+			alert("Hi again!!!");
 			new Ajax.Request
 			(
 				url,

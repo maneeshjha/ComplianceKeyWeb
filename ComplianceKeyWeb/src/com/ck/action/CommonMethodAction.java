@@ -21,7 +21,7 @@ public class CommonMethodAction extends ComplianceDispatchAction {
 	{
 		
 		PrintWriter				writer				=	response.getWriter();
-		String					speakerName				=	request.getParameter("spkName")== null ? "" : request.getParameter("spkName").trim().toUpperCase();
+		String					speakerName			=	request.getParameter("spkName")== null ? "" : request.getParameter("spkName").trim().toUpperCase();
 		String					status				=	request.getParameter("status");
 		CommonMethodBean		commonMethodBean		= new CommonMethodBean();
 		JSONArray				speakerList			=	commonMethodBean.getSpeakerNameForTTS(speakerName, status);
