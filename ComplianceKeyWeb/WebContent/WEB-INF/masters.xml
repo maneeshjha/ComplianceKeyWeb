@@ -10,6 +10,10 @@
         
         <!-- form bean -->
         <form-bean name="SpeakerForm" 						type="com.ck.DAO.Masters.SpeakerForm" />
+        <form-bean name="RoleForm" 						type="com.ck.DAO.Masters.RoleForm" />
+        <form-bean name="IndustriesForm" 					type="com.ck.DAO.Masters.IndustriesForm" />
+        <form-bean name="ArticleForm" 						type="com.ck.DAO.Masters.ArticleForm" />
+        <form-bean name="WhitePaperForm" 					type="com.ck.DAO.Masters.WhitePaperForm" />
     </form-beans>
     
     <!-- ========== Global Exception Definitions ============================== -->
@@ -26,14 +30,51 @@
 	    <action
             path		= 	"/speakerAction"
             type		= 	"com.ck.action.Masters.SpeakerAction"
-            parameter	=	"reqCode"
+            parameter		=	"reqCode"
             name		=	"SpeakerForm"
             scope		=	"request"
-            validate	=	"false"
-            attribute	=	"SpeakerForm" >
+            validate		=	"false"
+            attribute		=	"SpeakerForm" >
             
             <forward name	=	"showSpeakerMasterPage"					path = "/JSP/SpeakerMaster.jsp" />
             <forward name	=	"showSpeakerListPage"				path = "/JSP/SpeakerList.jsp" />
+	    </action>
+	      <action
+            path		= 	"/roleAction"
+            type		= 	"com.ck.action.Masters.RoleAction"
+            parameter		=	"reqCode"
+            name		=	"RoleForm"
+            scope		=	"request"
+            validate		=	"false"
+            attribute		=	"RoleForm" >
+          
+	    </action>
+	      <action
+            path		= 	"/industriesAction"
+            type		= 	"com.ck.action.Masters.IndustriesAction"
+            parameter		=	"reqCode"
+            name		=	"IndustriesForm"
+            scope		=	"request"
+            validate		=	"false"
+            attribute		=	"IndustriesForm" >
+	    </action>
+	    <action
+            path		= 	"/articleAction"
+            type		= 	"com.ck.action.Masters.ArticleAction"
+            parameter		=	"reqCode"
+            name		=	"ArticleForm"
+            scope		=	"request"
+            validate		=	"false"
+            attribute		=	"ArticleForm" >
+	    </action>
+	    <action
+            path		= 	"/whitePaperAction"
+            type		= 	"com.ck.action.Masters.WhitePaperAction"
+            parameter		=	"reqCode"
+            name		=	"WhitePaperForm"
+            scope		=	"request"
+            validate		=	"false"
+            attribute		=	"WhitePaperForm" >
 	    </action>
 	    
 	   
