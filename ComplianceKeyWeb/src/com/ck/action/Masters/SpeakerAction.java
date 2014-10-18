@@ -31,7 +31,7 @@ public class SpeakerAction extends ComplianceDispatchAction{
 	public ActionForward insertSpeakerInfo(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 				SpeakerForm  				speakerForm  	= 			(SpeakerForm)form;
 				FormFile					file			=			speakerForm.getFile();
-				String   					filePath		=			"D:"+"/ComplianceKey";
+				String   					filePath		=			"D:"+"/ComplianceKey"+"/SpeakerPics";
 				File 						folder			= 			new File(filePath);
 				String 						fileName		=			file.getFileName();
 				String 						fileMessage		=				"";

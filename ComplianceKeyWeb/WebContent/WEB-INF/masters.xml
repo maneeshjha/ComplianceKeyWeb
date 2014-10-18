@@ -67,6 +67,7 @@
             scope		=	"request"
             validate		=	"false"
             attribute		=	"ArticleForm" >
+            <forward name	=	"showArticleMasterPage"					path = "/JSP/ArticleMaster.jsp" />
 	    </action>
 	    <action
             path		= 	"/whitePaperAction"

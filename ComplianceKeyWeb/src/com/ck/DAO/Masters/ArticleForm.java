@@ -11,6 +11,41 @@ public class ArticleForm extends ActionForm{
 	private String articleId;
 	private String articleName;
 	private FormFile file;
+	private String articlePath;
+	private String description;
+	private String industryID;
+	private String status;
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public String getArticlePath() {
+		return articlePath;
+	}
+
+	public void setArticlePath(String articlePath) {
+		this.articlePath = articlePath;
+	}
+	public String getIndustryID() {
+		return industryID;
+	}
+
+	public void setIndustryID(String industryID) {
+		this.industryID = industryID;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(final String description) {
+		this.description = description;
+	}
+
 	public String getArticleId() {
 		return articleId;
 	}
@@ -21,7 +56,10 @@ public class ArticleForm extends ActionForm{
 		this.articleId=null; 
 		this.articleName=null;
 		this.file=null;
-		
+		this.description=null;
+		this.industryID=null;
+		this.articlePath=null;
+
 	}
 
 	public void setArticleId(final String articleId) {
