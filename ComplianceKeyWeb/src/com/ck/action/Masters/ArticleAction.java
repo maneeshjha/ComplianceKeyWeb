@@ -13,7 +13,6 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
 
-import com.ck.Bean.Masters.ArticleBean;
 import com.ck.DAO.Masters.ArticleForm;
 import com.ck.action.ComplianceDispatchAction;
 

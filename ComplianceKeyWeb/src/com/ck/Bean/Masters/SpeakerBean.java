@@ -10,11 +10,9 @@ import com.ck.DAO.Masters.SpeakerForm;
 import com.ck.DBConnection.DBConnection;
 
 public class SpeakerBean {
-	public static boolean updateUserInfo(SpeakerForm form)
+	public static boolean insertUserInfo(SpeakerForm form)
 	{
 		Connection			   con			=	null;
-		Statement			   st			=	null;
-		ResultSet			   rs			=	null;
 		String				   query		=	"";		
 		PreparedStatement		pst			=	null;
 		int						count		=	0;

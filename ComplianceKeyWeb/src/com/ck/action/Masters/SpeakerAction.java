@@ -28,11 +28,8 @@ public class SpeakerAction extends ComplianceDispatchAction{
 	}
 	//@author:Maneesh
 	//purpose:To update speaker Info
-	public ActionForward updateSpeakerInfo(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
+	public ActionForward insertSpeakerInfo(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
 				SpeakerForm  				speakerForm  	= 			(SpeakerForm)form;
-				String 						speakerName		=   		speakerForm.getSpeakerName() ;
-				String 						description		=			speakerForm.getDescription();
-				String 						status			=			speakerForm.getStatus();
 				FormFile					file			=			speakerForm.getFile();
 				String   					filePath		=			"D:"+"/ComplianceKey";
 				File 						folder			= 			new File(filePath);
@@ -61,7 +58,7 @@ public class SpeakerAction extends ComplianceDispatchAction{
 				}
 			if(!fileMessage.isEmpty())
 			{
-				success=SpeakerBean.updateUserInfo(speakerForm);
+				success=SpeakerBean.insertUserInfo(speakerForm);
 				
 			}
 			if(success)

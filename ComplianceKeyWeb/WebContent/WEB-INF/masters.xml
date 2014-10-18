@@ -57,6 +57,7 @@
             scope		=	"request"
             validate		=	"false"
             attribute		=	"IndustriesForm" >
+             <forward name	=	"showIndustriesMasterPage"					path = "/JSP/IndustriesMaster.jsp" />
 	    </action>
 	    <action
             path		= 	"/articleAction"

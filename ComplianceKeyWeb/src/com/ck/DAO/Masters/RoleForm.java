@@ -4,5 +4,5 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts.action.ActionForm; 
 import org.apache.struts.action.ActionMapping; 
 
-  public class SpeakerForm extends ActionForm{ 
+  public class RoleForm extends ActionForm{ 
   }
